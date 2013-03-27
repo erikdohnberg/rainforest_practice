@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+
   # GET product
   def index
     @products = Product.all
@@ -22,6 +23,7 @@ class ProductsController < ApplicationController
       redirect_to @product, notice: 'Product posted successfully!'
     else
       render action: :new
+    end
   end
 
   # GET product/1/edit
