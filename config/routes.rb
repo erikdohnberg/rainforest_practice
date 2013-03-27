@@ -1,5 +1,13 @@
 Rainforest::Application.routes.draw do
   
+  get "review/new"
+
+  get "review/show"
+
+  get "review/create"
+
+  get "review/destroy"
+
   root :to => "products#index"
 
   resources :products
