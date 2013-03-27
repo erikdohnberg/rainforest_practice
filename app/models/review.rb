@@ -1,3 +1,3 @@
 class Review < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :comment
 end
