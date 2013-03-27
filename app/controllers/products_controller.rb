@@ -34,9 +34,17 @@ class ProductsController < ApplicationController
   # GET product/1
   def update
     @product = Product.find(params[:id])
+    if @product.update_attributes(params[:product])
+      redirect_to @product, noitce: "Product edited successfully"
+    else
+      render action: :edit
+    end
   end
 
+  # DELETE products
   def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
   end
 
 
