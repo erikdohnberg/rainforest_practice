@@ -15,7 +15,7 @@
 		<% @products.each do |p| %>
 			<tr>
 				<td><%= p.name %></td>
-				<td><%= p.discription %></td>
+				<td><%= p.description %></td>
 				<td><%= p.price_in_cents %></td>
 				<td><%= link_to "Show", product_path(p) %>
 					<%= link_to "Edit", edit_product_path(p) %>
