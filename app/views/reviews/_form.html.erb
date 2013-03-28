@@ -1,4 +1,4 @@
-<%= form_for @review do |review| %>
+<%= form_for [@product, @review] do |review| %>
 
 	<% if @review.errors.any? %>
     <div id="error_explanation">
@@ -11,7 +11,7 @@
     </div>
   <% end %>
 	<p>
-	<%= review.text_field :comment %>
+	<%= review.text_area :comment %>
 	</p>
 	<p>
 	<%= review.submit 'Post' %>
