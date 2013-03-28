@@ -1,0 +1,15 @@
+<h3>Product Reviews</h3>
+<p>
+<u><%= pluralize(@product.reviews.count, "review") %> for <%= @product.name %></u>
+</p>
+
+<p>
+	<% @product.reviews.each do |review| %>
+		<div class="review">
+		<em>Posted by: <%= review.user.name %></em>
+		<p>
+			<%= review.comment %>
+		</p>
+		</div>
+	<% end %>
+</p>
