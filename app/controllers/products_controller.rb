@@ -28,7 +28,11 @@ class ProductsController < ApplicationController
 
   # GET product/1/edit
   def edit
+    if current_user
     @product = Product.find(params[:id])
+    else
+      redirect_to new_session_path
+    end
   end
 
   # GET product/1

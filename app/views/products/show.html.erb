@@ -1,3 +1,5 @@
+<div class="row">
+  <div class="span4">
 <h1><%= @product.name %></h1>
 
 <p>
@@ -13,9 +15,12 @@
 		<%= button_to "Write a review", new_product_review_path(@product, @review), :method => :get %>
 	</p>
 <% end %>
-
+</div>
+  <div class="span8">
 <%= render 'reviews' %>
 
 <p>
 <%= render 'back_to_products' %>
 </p>
+</div>
+</div>
